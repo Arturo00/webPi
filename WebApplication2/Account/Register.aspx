@@ -1,11 +1,15 @@
-﻿<%@ Page Title="Registro" Language="C#" MasterPageFile="~/Site1.master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="WebApplication2.Account.Register" %>
-
-<%--Inherits="nitrocar._Default"--%>
+﻿<%@ Page
+    Title="Registro"
+    Language="C#"
+    MasterPageFile="~/Site1.master"
+    AutoEventWireup="true"
+    CodeBehind="Register.aspx.cs"
+    Inherits="WebApplication2.Account.Register" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <form id="form1" runat="server">
+    <form id="formRegister" runat="server">
 
         <!-- Mensaje of error -->
         <div class="row">
@@ -20,21 +24,13 @@
                 </div>
             </div>
         </div>
-        <%--
-        OKprivate string email = "asd";
-        OKprivate string usuario = "asd";
-        OKprivate string password = "asd";
-        OKprivate string nombre = "asd";
-        OKprivate string apellidos = "asd";
-        OKprivate int telefono = -1;
-        OKprivate int codpos = -1;
-        OKprivate int sexo = -1;
-        OKprivate string provincia = "asd";
-        OKprivate string ciudad = "asd";
-        --%>
+
+        <!-- Título - Regístrese -->
         <h3>
             <asp:Label ID="LabelRegister" runat="server" CssClass="text-left">Regístrese</asp:Label>
         </h3>
+
+
         <div class="clear"></div>
         <br />
 

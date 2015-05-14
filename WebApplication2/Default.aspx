@@ -4,17 +4,14 @@
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <form id="form1" runat="server">
+    <form id="formDefault" runat="server">
         <div class="jumbotron" style="margin-top: 70px !important;">
 
             <!-- El scroll de imagenes tiene que ir aqui -->
-            <div class="intro-slide">
-
-                <div>
-                    <asp:Image ID="IMG1" ImageUrl="~/Images/FlatSlide.jpg" runat="server" AlternateText="IMG" />
+            <div id="intro-slide">
+                <div class="hidden-xs hidden-sm-7 hidden-md-5 row text-center">
+                    <asp:Image ID="IMG1" ImageUrl="~/Images/FlatSlide.png" runat="server" AlternateText="IMG" />
                 </div>
-
-
             </div>
 
             <div class="bottom">

@@ -1,0 +1,17 @@
+<%@ Page
+    Title="Login"
+    Language="C#"
+    MasterPageFile="~/Site1.master"
+    AutoEventWireup="true"
+    CodeBehind="Login.aspx.cs"
+    Inherits="WebApplication2.Account.Login" %>
+
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+</asp:Content>
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <form id="form1" runat="server">
+
+        <%--CODE--%>
+
+    </form>
+</asp:Content>

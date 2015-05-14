@@ -4,19 +4,22 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head id="Head1" runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+
+
     <!-- Bootstrap -->
+
     <link href="Styles/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="Styles/bootstrap-lightbox.css" rel="stylesheet" type="text/css" />
-    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
 
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <div class="container">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -43,17 +46,16 @@
                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
             </form>
         </div>
-        <li style="margin-right:15px;"><a href="/Login.aspx">Log In</a></li>
+        <li style="margin-right:15px;"><a href="/Account/Login.aspx">Log In</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
     </nav>
         <div class="container">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
-
             </asp:ContentPlaceHolder>
         </div>
-        <p style="border-top: 1px solid #999; font-size: 12px; padding: 10px; text-align:center; margin-top:10px;">Copyright (C) 2015 - UniFlat All Rights Reserved</p>
+        <p style="border-top: 1px solid #999; font-size: 12px; padding: 10px; text-align: center; margin-top: 10px;">Copyright (C) 2015 - UniFlat All Rights Reserved</p>
     </div>
     <!-- Scripts -->
     <script src="Scripts/jquery-2.1.4.js" type="js"></script>

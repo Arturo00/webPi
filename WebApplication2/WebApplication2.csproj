@@ -61,6 +61,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account\InsertFlat.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Plantilla ASP.txt" />
     <Content Include="Account\Register.aspx" />
     <Content Include="anunciacasa_files\formoid1\formoid-metro-cyan.css" />
     <Content Include="anunciacasa_files\formoid1\formoid-metro-cyan.js" />
@@ -77,6 +80,7 @@
     <Content Include="About.aspx" />
     <Content Include="Catalogo.aspx" />
     <Content Include="Administracion.aspx" />
+    <Content Include="Images\FlatSlide.png" />
     <Content Include="PanelCuenta.aspx" />
     <Content Include="login.html" />
     <Content Include="login_files\formoid1\formoid-metro-cyan.css" />
@@ -98,6 +102,7 @@
     <Content Include="Styles\bootstrap-theme.min.css" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\DefaultStyle.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="vertical navbar.html" />
     <Content Include="Web.config" />
@@ -109,6 +114,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\InsertFlat.aspx.cs">
+      <DependentUpon>InsertFlat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\InsertFlat.aspx.designer.cs">
+      <DependentUpon>InsertFlat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
