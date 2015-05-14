@@ -33,9 +33,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/Default.aspx">Inicio</a></li>
-        <li><a href="/Catalogo.aspx">Catálogo</a></li>
-        <li><a href="/Register.aspx">Únete</a></li>
+        <li><a href="/Catalogo.aspx">Catálogo de pisos</a></li>
+        <li><a href="/InsertFlat.aspx">Inserta tu piso</a></li>
         <li><a href="/About.aspx">Acerca de</a></li>
+
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <div style="float:left; margin-right: 20px;">

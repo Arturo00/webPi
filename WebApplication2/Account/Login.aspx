@@ -29,7 +29,7 @@
         </div>
         <div class="clear"></div>
         <h3>
-            <asp:Label ID="LabelLogin" runat="server" CssClass="text-left">Regístrese</asp:Label>
+            <asp:Label ID="LabelLogin" runat="server" CssClass="text-left">Inscríbase</asp:Label>
         </h3>
 
 

@@ -7,11 +7,14 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace nitrocar {
-    
-    
-    public partial class _Default {
-        
+
+namespace WebApplication2
+{
+
+
+    public partial class Default
+    {
+
         /// <summary>
         /// Control formDefault.
         /// </summary>
@@ -20,7 +23,7 @@ namespace nitrocar {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm formDefault;
-        
+
         /// <summary>
         /// Control IMG1.
         /// </summary>
@@ -29,7 +32,7 @@ namespace nitrocar {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image IMG1;
-        
+
         /// <summary>
         /// Control pisos.
         /// </summary>
@@ -38,7 +41,7 @@ namespace nitrocar {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList pisos;
-        
+
         /// <summary>
         /// Control provincia.
         /// </summary>
@@ -47,7 +50,7 @@ namespace nitrocar {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList provincia;
-        
+
         /// <summary>
         /// Control ciudad.
         /// </summary>
@@ -56,7 +59,7 @@ namespace nitrocar {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ciudad;
-        
+
         /// <summary>
         /// Control TextBox1.
         /// </summary>
@@ -65,7 +68,7 @@ namespace nitrocar {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
+
         /// <summary>
         /// Control TextBox2.
         /// </summary>

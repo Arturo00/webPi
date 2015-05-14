@@ -1,5 +1,11 @@
-﻿<%@ Page Title="Página principal" Language="C#" MasterPageFile="~/Site1.master" AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs" Inherits="nitrocar._Default" %>
+﻿<%@ Page 
+    Title="Página principal" 
+    Language="C#" 
+    MasterPageFile="~/Site1.master" 
+    AutoEventWireup="true"
+    CodeBehind="Default.aspx.cs" 
+%>
+<%--Inherits="nitrocar._Default"--%>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>

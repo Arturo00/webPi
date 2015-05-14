@@ -61,32 +61,22 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\InsertFlat.aspx" />
+    <Content Include="Account\AccountPanel.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Plantilla ASP.txt" />
     <Content Include="Account\Register.aspx" />
-    <Content Include="anunciacasa_files\formoid1\formoid-metro-cyan.css" />
-    <Content Include="anunciacasa_files\formoid1\formoid-metro-cyan.js" />
-    <Content Include="anunciacasa_files\formoid1\jquery.min.js" />
     <Content Include="App_Data\PisosDB.mdf" />
     <Content Include="App_Data\PisosDB_log.ldf">
       <DependentUpon>PisosDB.mdf</DependentUpon>
     </Content>
-    <Content Include="css\bootstrap-theme.css" />
-    <Content Include="css\bootstrap-theme.min.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="About.aspx" />
     <Content Include="Catalogo.aspx" />
-    <Content Include="Administracion.aspx" />
     <Content Include="Images\FlatSlide.png" />
-    <Content Include="PanelCuenta.aspx" />
-    <Content Include="login.html" />
+    <Content Include="InsertFlat.aspx" />
     <Content Include="login_files\formoid1\formoid-metro-cyan.css" />
     <Content Include="login_files\formoid1\formoid-metro-cyan.js" />
     <Content Include="login_files\formoid1\jquery.min.js" />
-    <Content Include="Login.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
@@ -102,7 +92,6 @@
     <Content Include="Styles\bootstrap-theme.min.css" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
-    <Content Include="Styles\DefaultStyle.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="vertical navbar.html" />
     <Content Include="Web.config" />
@@ -114,12 +103,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\InsertFlat.aspx.cs">
-      <DependentUpon>InsertFlat.aspx</DependentUpon>
+    <Compile Include="Account\AccountPanel.aspx.cs">
+      <DependentUpon>AccountPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Account\InsertFlat.aspx.designer.cs">
-      <DependentUpon>InsertFlat.aspx</DependentUpon>
+    <Compile Include="Account\AccountPanel.aspx.designer.cs">
+      <DependentUpon>AccountPanel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -156,26 +145,12 @@
     <Compile Include="Catalogo.aspx.designer.cs">
       <DependentUpon>Catalogo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Administracion.aspx.cs">
-      <DependentUpon>Administracion.aspx</DependentUpon>
+    <Compile Include="InsertFlat.aspx.cs">
+      <DependentUpon>InsertFlat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administracion.aspx.designer.cs">
-      <DependentUpon>Administracion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="PanelCuenta.aspx.cs">
-      <DependentUpon>PanelCuenta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PanelCuenta.aspx.designer.cs">
-      <DependentUpon>PanelCuenta.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="InsertFlat.aspx.designer.cs">
+      <DependentUpon>InsertFlat.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">
@@ -187,19 +162,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="anunciacasa_files\formoid1\.htaccess" />
-    <None Include="anunciacasa_files\formoid1\form.formoid" />
-    <None Include="anunciacasa_files\formoid1\form.php" />
-    <None Include="anunciacasa_files\formoid1\formoid.eot" />
-    <None Include="anunciacasa_files\formoid1\formoid.svg" />
-    <None Include="anunciacasa_files\formoid1\formoid.ttf" />
-    <None Include="anunciacasa_files\formoid1\formoid.woff" />
-    <None Include="anunciacasa_files\formoid1\handler.php" />
-    <None Include="anunciacasa_files\formoid1\helpers.php" />
-    <None Include="anunciacasa_files\formoid1\JSON.php" />
-    <None Include="anunciacasa_files\formoid1\recaptchalib.php" />
-    <None Include="css\bootstrap-theme.css.map" />
-    <None Include="css\bootstrap.css.map" />
     <None Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="fonts\glyphicons-halflings-regular.svg" />
     <None Include="fonts\glyphicons-halflings-regular.ttf" />

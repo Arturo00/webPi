@@ -1,15 +1,15 @@
 ﻿<%@ Page
-    Title="Registro"
+    Title="AccountPanel"
     Language="C#"
     MasterPageFile="~/Site1.master"
     AutoEventWireup="true"
-    CodeBehind="Register.aspx.cs"
-    Inherits="WebApplication2.Account.Register" %>
+    CodeBehind="AccountPanel.aspx.cs"
+    Inherits="WebApplication2.Account.AccountPanel" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <form id="formRegister" runat="server">
+    <form id="formAccountPanel" runat="server">
 
         <!-- Mensaje of error -->
         <div class="row">
@@ -25,11 +25,26 @@
             </div>
         </div>
 
-        <!-- Título - Regístrese -->
+
+        <!-- Título - Panel de usuario -->
         <h3>
-            <asp:Label ID="LabelRegister" runat="server" CssClass="text-left">Regístrese</asp:Label>
+            <asp:Label ID="LabelAccountPanel" runat="server" CssClass="text-left">Panel de usuario</asp:Label>
         </h3>
 
+        <!-- Variables para meterlas en el texto de las textbox -->
+        <!-- No lo he metido aun por que no se si es ejor llamar a un metodo-->
+        <!-- O algo parecido a DB.User.Name...pero esto, es una idea. -->
+        <%
+            var name = "";
+            var surname = "";
+            var email = "";
+            var alias = "";
+            var phone = "";
+            var gender = "";
+            var CP = "";
+            var city = "";
+            var province = "";
+        %>
 
         <div class="clear"></div>
         <br />
@@ -42,7 +57,7 @@
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                     <div class="input-group">
-                        <asp:TextBox ID="TextBoxName" runat="server" CssClass="form-control" />
+                        <asp:TextBox ID="TextBoxName" Text="NombreDePrueba" runat="server" CssClass="form-control" />
                     </div>
                 </div>
             </div>
@@ -253,5 +268,6 @@
 
         </div>
         <!-- /Validator -->
+
     </form>
 </asp:Content>

@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebApplication2 {
-    
-    
-    public partial class Formulario_web1 {
+namespace WebApplication2
+{
+    public partial class Catalogo
+    {
     }
 }
