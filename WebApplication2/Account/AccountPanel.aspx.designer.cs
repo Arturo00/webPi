@@ -256,13 +256,13 @@ namespace WebApplication2.Account {
         protected global::System.Web.UI.WebControls.TextBox TextBoxRepeatPassword;
         
         /// <summary>
-        /// Control ButtonRegister.
+        /// Control ButtonModify.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonRegister;
+        protected global::System.Web.UI.WebControls.Button ButtonModify;
         
         /// <summary>
         /// Control RequiredFieldValidatorName.

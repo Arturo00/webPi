@@ -17,7 +17,7 @@
                 <br />
                 <br />
                 <br />
-                <asp:ValidationSummary ID="ValidationSummary" runat="server" CssClass="alert alert-danger" ValidationGroup="Register" />
+                <asp:ValidationSummary ID="ValidationSummary" runat="server" CssClass="alert alert-danger" ValidationGroup="AccountPanel" />
 
                 <div id="divLabelError" class="alert alert-danger" runat="server" visible="false">
                     <asp:Label ID="LabelError" runat="server"></asp:Label>
@@ -31,21 +31,6 @@
             <asp:Label ID="LabelAccountPanel" runat="server" CssClass="text-left">Panel de usuario</asp:Label>
         </h3>
 
-        <!-- Variables para meterlas en el texto de las textbox -->
-        <!-- No lo he metido aun por que no se si es ejor llamar a un metodo-->
-        <!-- O algo parecido a DB.User.Name...pero esto, es una idea. -->
-        <%
-            var name = "";
-            var surname = "";
-            var email = "";
-            var alias = "";
-            var phone = "";
-            var gender = "";
-            var CP = "";
-            var city = "";
-            var province = "";
-        %>
-
         <div class="clear"></div>
         <br />
 
@@ -57,7 +42,7 @@
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                     <div class="input-group">
-                        <asp:TextBox ID="TextBoxName" Text="NombreDePrueba" runat="server" CssClass="form-control" />
+                        <asp:TextBox ID="TextBoxName" runat="server" CssClass="form-control" />
                     </div>
                 </div>
             </div>
@@ -189,80 +174,80 @@
             </div>
 
 
-            <asp:Button ID="ButtonRegister" runat="server" Text="Registrarse" CssClass="btn btn-primary btn-lg buttonRegister"
-                ValidationGroup="Register" />
+            <asp:Button ID="ButtonModify" runat="server" Text="Modificar" CssClass="btn btn-primary btn-lg buttonRegister"
+                ValidationGroup="AccountPanel" />
             <div class="clear"></div>
             <br />
         </div>
 
         <!-- Validator -->
         <div id="validator" class="hide">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorName" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorName" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxName" CssClass="field-validation-valid" ErrorMessage="El nombre es obligatorio." />
 
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorLastName" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxLastName" CssClass="field-validation-valid" ErrorMessage="Los apellidos son obligatorios." />
 
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxEmail" CssClass="field-validation-valid" ErrorMessage="El email es obligatorio." />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail" runat="server" ValidationGroup="Register"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidatorEmail" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxEmail" CssClass="field-validation-valid" ErrorMessage="El email no tiene formato correcto"
                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             <asp:CustomValidator ID="CustomValidatorEmail" runat="server" CssClass="field-validation-valid"
                 ControlToValidate="TextBoxEmail" ErrorMessage="El email ya existe, inserte otro email valido"></asp:CustomValidator>
 
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxUserName" CssClass="field-validation-valid" ErrorMessage="El alias de usuario es obligatorio." />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidatorUserName" runat="server" ValidationGroup="Register"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidatorUserName" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxUserName" CssClass="field-validation-valid" ErrorMessage="El alias solo puede contener letras o números. No admite ñ ni acentos."
                 ValidationExpression="^[A-Za-z0-9]*$"></asp:RegularExpressionValidator>
             <asp:CustomValidator ID="CustomValidatorUserName" runat="server" CssClass="field-validation-valid"
                 ControlToValidate="TextBoxUserName" ErrorMessage="El usuario ya existe, inserte otro usuario valido"></asp:CustomValidator>
 
             <!-- Validador TLF -->
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhone" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPhone" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxPhone" CssClass="field-validation-valid" ErrorMessage="El teléfono es obligatorio." />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidatorPhone" runat="server" ValidationGroup="Register"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidatorPhone" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxPhone" CssClass="field-validation-valid" ErrorMessage="El teléfono debe contener almenos 9 cifras"
                 ValidationExpression="^[0-9]{9,9}$"></asp:RegularExpressionValidator>
 
             <!-- Validador GENDER -->
             <asp:RequiredFieldValidator
-                ID="RequiredFieldValidatorGender" runat="server" InitialValue="" ValidationGroup="Register"
+                ID="RequiredFieldValidatorGender" runat="server" InitialValue="" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxGender" CssClass="field-validation-valid" ErrorMessage="Genero obligatorio">
             </asp:RequiredFieldValidator>
 
             <!-- Validador Cod.Pos -->
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxCodPos" CssClass="field-validation-valid" ErrorMessage="El código postal es obligatorio." />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationGroup="Register"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxCodPos" CssClass="field-validation-valid" ErrorMessage="El código postal está restringido a 9 cifras"
                 ValidationExpression="^[0-9]{0,9}$"></asp:RegularExpressionValidator>
 
             <!-- Validador Ciudad/Municipio -->
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorCity" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorCity" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxCity" CssClass="field-validation-valid" ErrorMessage="Ciudad o municipio obligatorio." />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidatorCity" runat="server" ValidationGroup="Register"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidatorCity" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxCity" CssClass="field-validation-valid" ErrorMessage="La ciudad o municipio solo puede contener letras."
                 ValidationExpression="^[A-Za-zñ]*$"></asp:RegularExpressionValidator>
 
             <!-- Validador Provincia -->
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorProvince" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorProvince" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxProvince" CssClass="field-validation-valid" ErrorMessage="Provincia obligatoria." />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidatorProvince" runat="server" ValidationGroup="Register"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidatorProvince" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxProvince" CssClass="field-validation-valid" ErrorMessage="La provincia solo puede contener letras."
                 ValidationExpression="^[A-Za-zñ]*$"></asp:RegularExpressionValidator>
 
 
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorPassword" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxPassword" CssClass="field-validation-valid" ErrorMessage="El password es obligatorio." />
-            <asp:RegularExpressionValidator ID="RegularExpressionValidatorPassword" runat="server" ValidationGroup="Register"
+            <asp:RegularExpressionValidator ID="RegularExpressionValidatorPassword" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxPassword" CssClass="field-validation-valid" ErrorMessage="El password debe contener al menos 6 caracteres"
                 ValidationExpression="^[\s\S]{6,}$"></asp:RegularExpressionValidator>
 
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorRepeatPassword" runat="server" ValidationGroup="Register"
+            <asp:RequiredFieldValidator ID="RequiredFieldValidatorRepeatPassword" runat="server" ValidationGroup="AccountPanel"
                 ControlToValidate="TextBoxRepeatPassword" CssClass="field-validation-valid" ErrorMessage="Repetir password es obligatorio." />
-            <asp:CompareValidator ID="CompareValidatorPassword" runat="server" ValidationGroup="Register"
+            <asp:CompareValidator ID="CompareValidatorPassword" runat="server" ValidationGroup="AccountPanel"
                 ControlToCompare="TextBoxPassword" ControlToValidate="TextBoxRepeatPassword"
                 CssClass="field-validation-valid" ErrorMessage="Las contraseñas no coinciden." />
 

@@ -3,7 +3,7 @@
     Language="C#" 
     MasterPageFile="~/Site1.master" 
     AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs" 
+    CodeBehind="Default.aspx.cs"
 %>
 <%--Inherits="nitrocar._Default"--%>
 
@@ -14,9 +14,12 @@
         <div class="jumbotron" style="margin-top: 70px !important;">
 
             <!-- El scroll de imagenes tiene que ir aqui -->
-            <div id="intro-slide">
-                <div class="hidden-xs hidden-sm-7 hidden-md-5 row text-center">
+            <div id="intro-slide" class="hidden-xs hidden-sm-7 hidden-md-5 row text-center">
+                <div id="slideshow" class ="slideshow">
                     <asp:Image ID="IMG1" ImageUrl="~/Images/FlatSlide.png" runat="server" AlternateText="IMG" />
+                    <asp:Image ID="IMG2" ImageUrl="~/Images/FlatSlide.png" runat="server" AlternateText="IMG" />
+                    <asp:Image ID="IMG3" ImageUrl="~/Images/FlatSlide.png" runat="server" AlternateText="IMG" />
+                    <asp:Image ID="IMG4" ImageUrl="~/Images/FlatSlide.png" runat="server" AlternateText="IMG" />
                 </div>
             </div>
 
@@ -79,28 +82,4 @@
             </div>
         </div>
     </form>
-
-    <!-- Scripts with jQuery for the Checkbox, && slideShow -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            $(function () {
-                /* Checkbox */
-                $('.checkboxLogin').find('label').addClass("checkboxLoginLabel");
-
-                /* RadioButtons */
-                $('.radiobuttonLogin').find('input').addClass("radiobuttonInput");
-                $('.radiobuttonLogin').find('label').addClass("radiobuttonLabel");
-
-                /*slideshow */
-                $('.slideshow img:gt(0)').hide();
-                setInterval(function () {
-                    $('.slideshow :first-child').fadeOut()
-                       .next('img').fadeIn()
-                       .end().appendTo('.slideshow');
-                },
-                  4000);
-            });
-        });
-    </script>
 </asp:Content>

@@ -28,7 +28,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/Default.aspx" style="padding: 0px;"><img style="padding-top: 7px;" src="Images/nitroProLogo.png" alt="FlatBook" /></a>
+      <a class="navbar-brand" href="/Default.aspx" style="padding: 0px;">
+          <img style="padding-top: 7px;" src="Images/FlatbookLogo.png" alt="FlatBook" />
+
+      </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -61,6 +64,21 @@
     <!-- Scripts -->
     <script src="Scripts/jquery-2.1.4.js" type="js"></script>
     <script src="Scripts/bootstrap.js" type="js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(function () {
+                /*slideshow */
+                $('.slideshow img:gt(0)').hide();
+                setInterval(function () {
+                    $('.slideshow :first-child').fadeOut()
+                       .next('img').fadeIn()
+                       .end().appendTo('.slideshow');
+                },
+                  4000);
+            });
+        });
+    </script>
 </body>
 </html>
 

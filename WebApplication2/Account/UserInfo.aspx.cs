@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication2.Account
 {
-    public partial class InsertFlat : System.Web.UI.Page
+    public partial class UserInfo : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

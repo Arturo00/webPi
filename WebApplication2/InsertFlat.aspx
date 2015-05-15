@@ -7,6 +7,21 @@
     Inherits="WebApplication2.Account.InsertFlat" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $(function () {
+                /*slideshow */
+                $('.slideshow img:gt(0)').hide();
+                setInterval(function () {
+                    $('.slideshow :first-child').fadeOut()
+                       .next('img').fadeIn()
+                       .end().appendTo('.slideshow');
+                },
+                  4000);
+            });
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <form id="formInsertFlat" runat="server">
@@ -35,7 +50,9 @@
         <br />
 
         <div class="form-horizontal">
-            <!-- Título del anuncio -->
+
+
+            <%--            <!-- Título del anuncio -->
             <div class="form-group">
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <asp:Label ID="LabelTitle" runat="server" CssClass="control-label bold">Título del anuncio: </asp:Label>
@@ -45,7 +62,7 @@
                         <asp:TextBox ID="TextBoxTitle" runat="server" CssClass="form-control" />
                     </div>
                 </div>
-            </div>
+            </div>--%>
 
             <!-- Descripción -->
             <div class="form-group">
@@ -54,9 +71,9 @@
                 </div>
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                     <div class="input-group">
-                        <asp:TextBox ID="TextBoxDescription" runat="server" 
-                            CssClass="form-control" Height="300px" 
-                            TextMode="MultiLine" Width="300px"/>
+                        <asp:TextBox ID="TextBoxDescription" runat="server"
+                            CssClass="form-control" Height="300px"
+                            TextMode="MultiLine" Width="300px" />
                     </div>
                 </div>
             </div>
@@ -159,7 +176,7 @@
                 Text="Insertar piso"
                 CssClass="btn btn-primary btn-lg ButtonInsert"
                 ValidationGroup="InsertFlat" />
-            
+
 
             <div class="clear"></div>
             <br />
@@ -167,15 +184,18 @@
 
         <!-- Validator -->
         <div id="validator" class="hide">
-            <asp:RequiredFieldValidator ID="RequiredFieldValidatorTitle" runat="server" ValidationGroup="InsertFlat"
+
+            <%--
+                <asp:RequiredFieldValidator ID="RequiredFieldValidatorTitle" runat="server" ValidationGroup="InsertFlat"
                 ControlToValidate="TextBoxTitle" CssClass="field-validation-valid" ErrorMessage="El título es obligatorio." />
+            --%>
 
             <!-- Validador PRICE -->
             <asp:RequiredFieldValidator ID="RequiredFieldValidatorPrice" runat="server" ValidationGroup="InsertFlat"
                 ControlToValidate="TextBoxPrice" CssClass="field-validation-valid" ErrorMessage="El precio es obligatorio." />
             <asp:RegularExpressionValidator ID="RegularExpressionValidatorPrice" runat="server" ValidationGroup="InsertFlat"
-                ControlToValidate="TextBoxPrice" CssClass="field-validation-valid" ErrorMessage="El precio puede contener mínimo 2 cifras y máximo 5, solo puede contener números"
-                ValidationExpression="^[0-9]{2,5}$"></asp:RegularExpressionValidator>
+                ControlToValidate="TextBoxPrice" CssClass="field-validation-valid" ErrorMessage="El precio puede contener mínimo 2 cifras y máximo 4, solo puede contener números"
+                ValidationExpression="^[0-9]{2,4}$"></asp:RegularExpressionValidator>
 
             <!-- Validador GENDER -->
             <asp:RequiredFieldValidator

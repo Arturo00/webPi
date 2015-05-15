@@ -65,6 +65,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Plantilla ASP.txt" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Account\UserInfo.aspx" />
     <Content Include="App_Data\PisosDB.mdf" />
     <Content Include="App_Data\PisosDB_log.ldf">
       <DependentUpon>PisosDB.mdf</DependentUpon>
@@ -72,6 +73,7 @@
     <Content Include="Default.aspx" />
     <Content Include="About.aspx" />
     <Content Include="Catalogo.aspx" />
+    <Content Include="Images\FlatbookLogo.png" />
     <Content Include="Images\FlatSlide.png" />
     <Content Include="InsertFlat.aspx" />
     <Content Include="login_files\formoid1\formoid-metro-cyan.css" />
@@ -123,6 +125,13 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
