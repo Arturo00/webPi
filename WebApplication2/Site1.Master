@@ -4,24 +4,20 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head id="Head1" runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
-
-
     <!-- Bootstrap -->
-
     <link href="Styles/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="Styles/bootstrap-lightbox.css" rel="stylesheet" type="text/css" />
-    <link href="~/Styles/CustomStyle.css" rel="stylesheet" type="text/css" />
-
+    <link rel="stylesheet" href="Styles/flexslider.css">
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -31,17 +27,15 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/Default.aspx" style="padding: 0px;">
-          <img style="padding-top: 7px;" src="Images/FlatbookLogo.png" alt="FlatBook" />
-
-      </a>
+          <img style="padding-top: 2px; padding-bottom: 5px; padding-right: 15px; padding-left: 15px;" src="Images/iconoWeb.png" alt="FlatBook" /></a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/Default.aspx">Inicio</a></li>
-        <li><a href="/Catalogo.aspx">Catálogo de pisos</a></li>
-        <li><a href="/InsertFlat.aspx">Inserta tu piso</a></li>
+        <li><a href="/Catalogo.aspx">Catálogo</a></li>
+        <li><a href="/Account/Register.aspx">Únete</a></li>
         <li><a href="/About.aspx">Acerca de</a></li>
-
+        <li></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <div style="float:left; margin-right: 20px;">
@@ -52,21 +46,21 @@
                 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
             </form>
         </div>
-        <li style="margin-right:15px;"><a href="/Account/Login.aspx">Log In</a></li>
+        <li style="margin-right:15px; color:white"><a href="/Account/Login.aspx"><asp:Label ID="Label1" runat="server" Text="Login"></asp:Label></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
     </nav>
         <div class="container">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
             </asp:ContentPlaceHolder>
         </div>
-        <p style="border-top: 1px solid #999; font-size: 12px; padding: 10px; text-align: center; margin-top: 10px;">Copyright (C) 2015 - UniFlat All Rights Reserved</p>
+        <p style="border-top: 1px solid #999; font-size: 12px; padding: 10px; text-align:center; margin-top:10px;">Copyright (C) 2015 - UniFlat All Rights Reserved</p>
     </div>
     <!-- Scripts -->
     <script src="Scripts/jquery-2.1.4.js" type="js"></script>
     <script src="Scripts/bootstrap.js" type="js"></script>
-
 </body>
 </html>
 

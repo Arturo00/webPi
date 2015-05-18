@@ -4,11 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{95185578-6A52-4DB2-A9C8-387A4B229142}"
-	ProjectSection(ProjectDependencies) = postProject
-		{9B5E34FA-2FBB-42F5-B5E9-B92DE0D9362F} = {9B5E34FA-2FBB-42F5-B5E9-B92DE0D9362F}
-	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaPisos", "LibreriaPisos\LibreriaPisos.csproj", "{9B5E34FA-2FBB-42F5-B5E9-B92DE0D9362F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaPisos", "WebApplication2\LibreriaPisos\LibreriaPisos.csproj", "{9B5E34FA-2FBB-42F5-B5E9-B92DE0D9362F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

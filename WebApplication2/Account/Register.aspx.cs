@@ -13,15 +13,17 @@ namespace WebApplication2.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LoggedIn"] != null)
+                Response.Redirect("~/Panel.aspx");
 
         }
 
         protected void ButtonRegister_Click(object sender, EventArgs e)
         {
-            string cnx2 = "Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|PisosDB.mdf;Integrated Security=True;User Instance=True";
-            User us2 = new User();
+             string cnx2 = "Data Source=.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|PisosDB.mdf;Integrated Security=True;User Instance=True";
+             User us2 = new User();
             User usaux = new User();
-            //bool valido = false;
+            bool valido = false;
             us2.Apellidos = TextBoxLastName.Text.Trim();
             us2.Ciudad = TextBoxCity.Text.Trim();
             us2.Codpos = Convert.ToInt32(TextBoxCodPos.Text);
@@ -33,9 +35,9 @@ namespace WebApplication2.Account
             us2.Provincia = TextBoxProvince.Text.Trim();
             us2.Telefono = Convert.ToInt32(TextBoxPhone.Text);
             us2.Usuario = TextBoxUserName.Text.Trim();
+            
 
-
-            usaux = UserBL.GetUserByMail(cnx2, us2.Email);
+            usaux = UserBL.GetUserByMail(cnx2,us2.Email);
             if (usaux == null || usaux.Email != us2.Email)
                 UserBL.CreateFromEN(cnx2, us2);
             else

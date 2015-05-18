@@ -8,8 +8,6 @@
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
-
-
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <form id="formLogin" runat="server">
 
@@ -59,7 +57,7 @@
                 </div>
 
                 <asp:Button ID="ButtonLogin" runat="server" Text="Iniciar Sesión" CssClass="btn btn-primary"
-                    ValidationGroup="Login" OnClick="ButtonLogin_Click" />
+                    ValidationGroup="Login" OnClick = "ButtonLogin_Click" />
 
                 <div class="clear"></div>
                 <br />

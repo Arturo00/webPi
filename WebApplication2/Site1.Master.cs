@@ -12,7 +12,19 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
+            if (!Page.IsPostBack)
+            {
+                if (Session.IsNewSession)
+                {
+                    Label1.Text = "Login";
+                }
+                else
+                    Label1.Text = Convert.ToString(Session["email"]);
 
+            }
+            else
+                Label1.Text = "Login";
+           
+        }
     }
 }

@@ -175,7 +175,7 @@
 
 
                     <asp:Button ID="ButtonRegister" runat="server" Text="Registrarse" CssClass="btn btn-primary btn-lg buttonRegister"
-                        ValidationGroup="Register" />
+                        ValidationGroup="Register" onclick="ButtonRegister_Click" />
                     <div class="clear"></div>
                     <br />
                 </div>

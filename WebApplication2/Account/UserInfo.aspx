@@ -15,59 +15,68 @@
         <br />
         <br />
 
-        <div id="UserInfoContainer" style="margin-left: auto; margin-right: auto;">
-            <!-- Título -->
-            <h2>Información de usuario</h2>
-            <br />
+        <!-- Título -->
+        <h3>
+            <asp:Label ID="LabelUserInfo" runat="server" CssClass="text-left">Información de usuario</asp:Label>
+        </h3>
 
-            <!-- Photo -->
-            <asp:Image ImageUrl="~/Images/defaultavatar.png" runat="server" AlternateText="Default" />
-            <br />
+        <br />
 
-            <!-- Name -->
+        <!-- Name -->
             <div class="form-group">
-                <div>
-                    <asp:Label ID="LabelNameDB" runat="server"><h3>Nombre</h3></asp:Label>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <asp:Label ID="LabelName" runat="server">Nombre: </asp:Label>
                 </div>
-            </div>
-
-            <!-- LastName -->
-            <div class="form-group">
-                <div>
-                    <asp:Label ID="LabelLastNameDB" runat="server">Apellidos</asp:Label>
-                </div>
-            </div>
-
-            <!-- Email -->
-            <div class="form-group">
-                <div>
-                    <asp:Label ID="LabelEmail" runat="server">Email: </asp:Label>
-                    <asp:Label ID="LabelEmailDB" runat="server">Email</asp:Label>
-                </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="form-group">
-                <div>
-                    <asp:Label ID="LabelPhone" runat="server">Teléfono: </asp:Label>
-                    <asp:Label ID="LabelPhoneDB" runat="server">Teléfono</asp:Label>
-                </div>
-            </div>
-
-            <!-- Score -->
-            <div class="form-group">
-                <div>
-                    <asp:Label ID="LabelScore" runat="server">Puntuación: </asp:Label>
-                    <div class="input-group rating">
-                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                    <div class="input-group">
+                    <asp:Label ID="LabelNameDB" runat="server">Nombre</asp:Label>
                     </div>
-                    <asp:Label ID="LabelScoreDB" runat="server">0.0</asp:Label>
+                </div>
+            </div>
+
+        <!-- LastName -->
+        <div class="form-group">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <asp:Label ID="LabelLastName" runat="server">Apellidos: </asp:Label>
+            </div>
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <div class="input-group">
+                <asp:Label ID="LabelLastNameDB" runat="server">Apellidos</asp:Label>
                 </div>
             </div>
         </div>
-        <%--DIV de UserInfoContainer--%>
+        <!-- Email -->
+        <div class="form-group">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <asp:Label ID="LabelEmail" runat="server">Email: </asp:Label>
+            </div>
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <div class="input-group">
+                <asp:Label ID="LabelEmailDB" runat="server">Email</asp:Label>
+                </div>
+            </div>
+        </div>
+        <!-- Phone -->
+        <div class="form-group">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <asp:Label ID="LabelPhone" runat="server">Teléfono: </asp:Label>
+            </div>
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <div class="input-group">
+                <asp:Label ID="LabelPhoneDB" runat="server">Teléfono</asp:Label>
+                </div>
+            </div>
+        </div>
+        <!-- Score -->
+        <div class="form-group">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            </div>
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <div class="input-group">
+                </div>
+            </div>
+        </div>
+
+
     </form>
-
 </asp:Content>
-
-

@@ -7,7 +7,6 @@
     Inherits="WebApplication2.Account.InsertFlat" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
-
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -23,7 +22,6 @@
             });
         });
     </script>
-
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <form id="formInsertFlat" runat="server">
@@ -124,18 +122,6 @@
                 </div>
             </div>
 
-            <!-- calle de la vivienda-->
-            <div class="form-group">
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <asp:Label ID="lbCalle" runat="server" CssClass="control-label bold">Calle dónde se encuentra la vivienda: </asp:Label>
-                </div>
-                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                    <div class="input-group">
-                        <asp:TextBox ID="TextBoxCalle" runat="server" CssClass="form-control" />
-                    </div>
-                </div>
-            </div>
-
             <!-- Ciudad o municipio de la vivienda-->
             <div class="form-group">
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -156,6 +142,17 @@
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                     <div class="input-group">
                         <asp:TextBox ID="TextBoxProvince" runat="server" CssClass="form-control" />
+                    </div>
+                </div>
+            </div>
+            <!-- calle de la vivienda-->
+            <div class="form-group">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <asp:Label ID="lbCalle" runat="server" CssClass="control-label bold">Calle dónde se encuentra la vivienda: </asp:Label>
+                </div>
+                <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                    <div class="input-group">
+                        <asp:TextBox ID="TextBoxCalle" runat="server" CssClass="form-control" />
                     </div>
                 </div>
             </div>
@@ -189,7 +186,7 @@
             <asp:Button ID="ButtonInsert" runat="server"
                 Text="Insertar piso"
                 CssClass="btn btn-primary btn-lg ButtonInsert"
-                ValidationGroup="InsertFlat" />
+                ValidationGroup="InsertFlat" onclick="ButtonInsert_Click" />
 
 
             <div class="clear"></div>
