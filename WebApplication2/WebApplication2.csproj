@@ -61,8 +61,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.aspx" />
     <Content Include="Account\AccountPanel.aspx" />
     <Content Include="Account\Login.aspx" />
+    <Content Include="Account\MyFlats.aspx" />
     <Content Include="Account\Plantilla ASP.txt" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\UserInfo.aspx" />
@@ -71,8 +73,9 @@
       <DependentUpon>PisosDB.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
-    <Content Include="About.aspx" />
-    <Content Include="Catalogo.aspx" />
+    <Content Include="FlatInfo.aspx" />
+    <Content Include="Images\404.jpg" />
+    <Content Include="Images\defaultavatar.png" />
     <Content Include="Images\FlatbookLogo.png" />
     <Content Include="Images\FlatSlide.png" />
     <Content Include="InsertFlat.aspx" />
@@ -94,6 +97,7 @@
     <Content Include="Styles\bootstrap-theme.min.css" />
     <Content Include="Styles\bootstrap.css" />
     <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\CustomStyle.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="vertical navbar.html" />
     <Content Include="Web.config" />
@@ -105,6 +109,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\AccountPanel.aspx.cs">
       <DependentUpon>AccountPanel.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,6 +129,13 @@
     </Compile>
     <Compile Include="Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\MyFlats.aspx.cs">
+      <DependentUpon>MyFlats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\MyFlats.aspx.designer.cs">
+      <DependentUpon>MyFlats.aspx</DependentUpon>
     </Compile>
     <Compile Include="Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -140,19 +158,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="FlatInfo.aspx.cs">
+      <DependentUpon>FlatInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Catalogo.aspx.cs">
-      <DependentUpon>Catalogo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Catalogo.aspx.designer.cs">
-      <DependentUpon>Catalogo.aspx</DependentUpon>
+    <Compile Include="FlatInfo.aspx.designer.cs">
+      <DependentUpon>FlatInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="InsertFlat.aspx.cs">
       <DependentUpon>InsertFlat.aspx</DependentUpon>
@@ -202,13 +213,13 @@
     <None Include="Styles\bootstrap-theme.css.map" />
     <None Include="Styles\bootstrap.css.map" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\dss\LibreriaPisos\LibreriaPisos.csproj">
-      <Project>{9B5E34FA-2FBB-42F5-B5E9-B92DE0D9362F}</Project>
+    <ProjectReference Include="..\LibreriaPisos\LibreriaPisos.csproj">
+      <Project>{9b5e34fa-2fbb-42f5-b5e9-b92de0d9362f}</Project>
       <Name>LibreriaPisos</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

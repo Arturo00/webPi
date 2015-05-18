@@ -13,6 +13,8 @@
 
     <link href="Styles/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="Styles/bootstrap-lightbox.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/CustomStyle.css" rel="stylesheet" type="text/css" />
+
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
@@ -64,21 +66,7 @@
     <!-- Scripts -->
     <script src="Scripts/jquery-2.1.4.js" type="js"></script>
     <script src="Scripts/bootstrap.js" type="js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
 
-            $(function () {
-                /*slideshow */
-                $('.slideshow img:gt(0)').hide();
-                setInterval(function () {
-                    $('.slideshow :first-child').fadeOut()
-                       .next('img').fadeIn()
-                       .end().appendTo('.slideshow');
-                },
-                  4000);
-            });
-        });
-    </script>
 </body>
 </html>
 

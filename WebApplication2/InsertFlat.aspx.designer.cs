@@ -130,6 +130,24 @@ namespace WebApplication2.Account {
         protected global::System.Web.UI.WebControls.TextBox TextBoxCodPos;
         
         /// <summary>
+        /// Control lbCalle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbCalle;
+        
+        /// <summary>
+        /// Control TextBoxCalle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxCalle;
+        
+        /// <summary>
         /// Control LabelCity.
         /// </summary>
         /// <remarks>
